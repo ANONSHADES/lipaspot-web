@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lipaspot FAQ</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: linear-gradient(135deg, #f0f6fc, #ffffff);
+      color: #333;
+    }
+
+    .faq-container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 30px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #114781;
+    }
+
+    /* Search Bar */
+    .faq-search {
+      margin-bottom: 25px;
+      text-align: center;
+    }
+    .faq-search input {
+      width: 80%;
+      max-width: 500px;
+      padding: 12px 15px;
+      font-size: 16px;
+      border: 2px solid #114781;
+      border-radius: 8px;
+      outline: none;
+      transition: 0.3s;
+    }
+    .faq-search input:focus {
+      border-color: #0d345e;
+      box-shadow: 0 0 6px rgba(17,71,129,0.3);
+    }
+
+    .faq-item {
+      border-bottom: 1px solid #eee;
+      padding: 15px 0;
+      transition: background 0.3s;
+    }
+
+    .faq-item:hover {
+      background: #f7fbff;
+    }
+
+    .faq-question {
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #114781;
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      margin-top: 0;
+      font-size: 16px;
+      color: #555;
+      line-height: 1.6;
+      transition: all 0.4s ease;
+    }
+
+    .faq-item.active .faq-answer {
+      max-height: 500px;
+      opacity: 1;
+      margin-top: 10px;
+    }
+
+    .arrow {
+      transition: transform 0.3s;
+      font-size: 20px;
+      color: #114781;
+    }
+
+    .faq-item.active .arrow {
+      transform: rotate(90deg);
+    }
+
+    /* Buttons Section */
+    .faq-buttons {
+      text-align: center;
+      margin: 30px auto;
+    }
+    .faq-buttons a {
+      display: inline-block;
+      margin: 10px;
+      padding: 12px 20px;
+      background: #114781;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background 0.3s, transform 0.2s;
+    }
+    .faq-buttons a:hover {
+      background: #0d345e;
+      transform: translateY(-2px);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .faq-container {
+        margin: 20px;
+        padding: 20px;
+      }
+      .faq-question {
+        font-size: 16px;
+      }
+      .faq-answer {
+        font-size: 14px;
+      }
+      .faq-search input {
+        width: 100%;
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="chatbot.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
+</head>
+<body>
+
+  <div class="faq-container">
+    <h2>💡 Lipaspot FAQ</h2>
+
+    <!-- Search Bar -->
+    <div class="faq-search">
+      <input type="text" id="faqSearch" placeholder="Search FAQs... (e.g. M-Pesa, support)">
+    </div>
+
+   <!-- FAQ Items -->
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>What is Lipaspot?</span>
+        <span class="arrow">▶</span>
+      </div>
+      <div class="faq-answer">
+        Lipaspot is a fintech software solution designed to help businesses, particularly those in the service industry, manage their payments and operations with greater efficiency and convenience. Our system automates M-Pesa payment confirmation and staff-level transaction tracking, streamlining daily tasks for both managers and employees.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>How does Lipaspot confirm M-Pesa payments?</span>
+        <span class="arrow">▶</span>
+      </div>
+      <div class="faq-answer">
+        When a customer makes a payment to your business's M-Pesa till, the Lipaspot software, which is configured on a PDQ machine, captures the payment confirmation message. It then instantly broadcasts this message to the relevant attendants, waiters, or cashiers on their mobile devices, ensuring on-the-spot verification and eliminating manual checks.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>How does the system help staff claim transactions?</span>
+        <span class="arrow">▶</span>
+      </div>
+      <div class="faq-answer">
+        Our system allows the staff member who served the customer to "claim" the transaction directly on their phone. This simple action links the specific M-Pesa payment to the individual employee, ensuring accurate tracking of who handled which sale.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>How does Lipaspot simplify end-of-shift reconciliation?</span>
+        <span class="arrow">▶</span>
+      </div>
+      <div class="faq-answer">
+        At the end of a shift, our software automatically generates a detailed report for each individual attendant, waiter, or cashier based on the transactions they have claimed. This automated calculation provides a clear and accurate summary of their performance, making the reconciliation process quick, easy, and transparent for both staff and management.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>What hardware and software are required to use Lipaspot?</span>
+        <span class="arrow">▶</span>
+      </div>
+      <div class="faq-answer">
+        To use our service, we provide you with a pre-configured PDQ machine that has our Lipaspot software installed. We also provide our dedicated mobile application (APK) for your attendants, waiters, or cashiers to install on their devices. The business owner or manager can then access a web-based interface to monitor reports and live business performance.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>Can business owners track performance in real-time?</span>
+        <span class="arrow">▶</span>
+      </div>
+      <div class="faq-answer">
+        Yes. The Lipaspot system includes a web-based interface that provides managers and owners with a live, real-time view of their business's performance. You can monitor sales, track staff activity, and view comprehensive reports from anywhere, giving you full control and insight into your operations.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>Is my business data secure with Lipaspot?</span>
+        <span class="arrow">▶</span>
+      </div>
+      <div class="faq-answer">
+        Security is our highest priority. As a fintech company, we adhere to stringent security standards. We use state-of-the-art encryption, multi-factor authentication, and regular security audits to ensure that all your business and customer data is protected and remains confidential. You can have peace of mind knowing your information is safe with us.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>Do I need to be a tech expert to use Lipaspot?</span>
+        <span class="arrow">▶</span>
+      </div>
+      <div class="faq-answer">
+        Not at all. Lipaspot is built with a simple, intuitive user interface that is easy to navigate for anyone, regardless of their technical expertise. We also provide a seamless onboarding process and ongoing customer support to guide you every step of the way, from initial setup to daily use.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>What kind of support do you offer?</span>
+        <span class="arrow">▶</span>
+      </div>
+      <div class="faq-answer">
+        We offer dedicated, reliable customer support to ensure your business runs smoothly. Our support team is available to assist you with any questions or issues you may encounter. You can reach us through multiple channels, including our in-app chat, email, and a dedicated support line, for timely and effective help.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>Can Lipaspot be customized for my business?</span>
+        <span class="arrow">▶</span>
+      </div>
+      <div class="faq-answer">
+        Absolutely. We understand that every business is unique. Lipaspot is highly modular and can be configured to meet your specific operational needs. During the demo and setup process, we work with you to understand your requirements and customize the features, dashboards, and reports to perfectly align with your business goals.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>How can I get Lipaspot for my business?</span>
+        <span class="arrow">▶</span>
+      </div>
+      <div class="faq-answer">
+        Getting started is easy. You can book a personalized demo with one of our experts to see a live demonstration of Lipaspot and discuss how it can be tailored to your specific business needs. Alternatively, you can contact us directly via WhatsApp or a phone call to speak with a representative and get all your questions answered.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>How much does Lipaspot cost?</span>
+        <span class="arrow">▶</span>
+      </div>
+      <div class="faq-answer">
+        Our pricing structure is transparent and designed to be flexible. We have an initial one-time set-up fee to get you fully onboarded, followed by a predictable monthly flat rate. This monthly rate is customized based on the size and scope of your business, ensuring you only pay for what you need without any hidden fees.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>What kind of businesses is Lipaspot for?</span>
+        <span class="arrow">▶</span>
+      </div>
+      <div class="faq-answer">
+        Lipaspot is a highly scalable solution. While it's particularly beneficial for fintech companies looking to streamline their operations, it's also a great fit for a wide range of other industries, including retail, e-commerce, and professional services. Our goal is to serve any business that wants to leverage technology to improve financial management and daily operations.
+      </div>
+    </div>
+
+  </div>
+
+  </div>
+
+  <!-- Buttons -->
+  <div class="faq-buttons">
+    <a href="contact.html">📞 Still have questions? Contact Us</a>
+    <a href="index.html">⬅ Back to Home</a>
+  </div>
+
+  <script>
+    // Accordion toggle
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(item => {
+      item.querySelector('.faq-question').addEventListener('click', () => {
+        item.classList.toggle('active');
+      });
+    });
+
+    // Search filter
+    const searchInput = document.getElementById('faqSearch');
+    searchInput.addEventListener('keyup', () => {
+      let filter = searchInput.value.toLowerCase();
+      faqItems.forEach(item => {
+        let question = item.querySelector('.faq-question span').textContent.toLowerCase();
+        let answer = item.querySelector('.faq-answer').textContent.toLowerCase();
+        if (question.includes(filter) || answer.includes(filter)) {
+          item.style.display = "block";
+        } else {
+          item.style.display = "none";
+        }
+      });
+    });
+  </script>
+<!-- Chatbot Structure -->
+<div id="chatbot-widget">
+  <div id="chatbot-header">
+    <div id="bot-avatar"></div>
+    <span>TechBot</span>
+    <button id="chatbot-close">✖</button>
+  </div>
+  <div id="chatbot-body"></div>
+  <div id="chatbot-footer">
+    <input type="text" id="chatbot-input" placeholder="Ask me something..."/>
+    <button id="chatbot-send">➤</button>
+  </div>
+</div>
+
+<!-- Floating Button -->
+<div id="chatbot-toggle">
+  <div id="bot-character"></div>
+</div>
+
+<script src="chatbot.js"></script>
+
+</body>
+</html>

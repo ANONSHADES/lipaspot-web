@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Us - SafePay Solutions</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f7fa;
+      color: #333;
+    }
+
+    .contact-container {
+      max-width: 1000px;
+      margin: 50px auto;
+      padding: 40px;
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 28px;
+      margin-bottom: 25px;
+      color: #114781;
+    }
+
+    .contact-details {
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .contact-details p {
+      margin: 10px 0;
+      font-size: 16px;
+      color: #444;
+    }
+
+    .contact-details a {
+      color: #114781;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .contact-details a:hover {
+      text-decoration: underline;
+    }
+
+    .map {
+      position: relative;
+      width: 100%;
+      height: 450px;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    /* We Are Here button */
+    .we-are-here {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #114781;
+      color: #fff;
+      padding: 12px 28px;
+      border-radius: 30px;
+      font-size: 15px;
+      font-weight: bold;
+      text-decoration: none;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+      animation: bounce 1.5s infinite;
+      transition: background 0.3s ease;
+    }
+
+    .we-are-here:hover {
+      background: #0d3560;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translate(-50%, 0); }
+      50% { transform: translate(-50%, -12px); }
+    }
+  </style>
+  <link rel="stylesheet" href="chatbot.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
+</head>
+<body>
+
+  <div class="contact-container">
+    <h2>Contact Us</h2>
+
+    <div class="contact-details">
+      <p><strong>📍 Address:</strong> SafePay Solutions Ltd, 3rd Floor Suite 301/302, Tana House, Karen Shopping Centre, Langata Rd, Nairobi</p>
+      <p><strong>📞 Phone:</strong> 
+        <a href="tel:+254705292111">+254 705 292 111</a> / 
+        <a href="tel:+254705292112">+254 705 292 112</a>
+      </p>
+      <p><strong>📧 Email:</strong> 
+        <a href="mailto:info@safepay.co.ke">info@safepay.co.ke</a>
+      </p>
+    </div>
+
+    <div class="map">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.855900637256!2d36.7202521!3d-1.3295896!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f10c8931f1a43%3A0x2e3f2b913c8a62df!2sSafePay%20Solutions%20Ltd%2C%203rd%20Floor%2C%20Tana%20House%2C%20Karen%20Shopping%20Centre!5e0!3m2!1sen!2ske!4v1699999999!5m2!1sen!2ske"
+        allowfullscreen=""
+        loading="lazy">
+      </iframe>
+
+      <a
+        class="we-are-here"
+        href="https://www.google.com/maps/place/SafePay+Solutions+Ltd,+3rd+Floor,+Tana+House,+Karen+Shopping+Centre,+Nairobi"
+        target="_blank"
+      >📍 We Are Here</a>
+    </div>
+  </div>
+<link rel="stylesheet" href="chatbot.css">
+<!-- Chatbot Structure -->
+<div id="chatbot-widget">
+  <div id="chatbot-header">
+    <div id="bot-avatar"></div>
+    <span>TechBot</span>
+    <button id="chatbot-close">✖</button>
+  </div>
+  <div id="chatbot-body"></div>
+  <div id="chatbot-footer">
+    <input type="text" id="chatbot-input" placeholder="Ask me something..."/>
+    <button id="chatbot-send">➤</button>
+  </div>
+</div>
+
+<!-- Floating Button -->
+<div id="chatbot-toggle">
+  <div id="bot-character"></div>
+</div>
+
+<script src="chatbot.js"></script>
+</body>
+</html>
